@@ -1,7 +1,7 @@
 beanstalk
 appname: docker-app-react
 region: sa-east-1
-env: Dockerappreact-env
+env: Dockerappreact-env-2
 s3: elasticbeanstalk-sa-east-1-056267554788
 AWS_ACCESS_KEY_ID = AKIAQ2GOOX7SDQHLXNWC
 AWS_SECRET_ACCESS_KEY = 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

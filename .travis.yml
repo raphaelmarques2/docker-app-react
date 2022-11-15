@@ -14,7 +14,7 @@ deploy:
   provider: elasticbeanstalk
   region: sa-east-1
   app: docker-app-react
-  env: Dockerappreact-env
+  env: Dockerappreact-env-2
   bucket_name: elasticbeanstalk-sa-east-1-056267554788
   bucket_path: "zip"
   on:
