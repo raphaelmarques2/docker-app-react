@@ -1,0 +1,11 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - cd frontend2
+  - docker build -t raphaelmarques84/docker-app-react .
+
+script:
+  - ls

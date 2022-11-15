@@ -1,7 +1,18 @@
 image: docker
 
+variables:
+  APP_NAME: "docker-app-react"
+  APP_VERSION: "1.0.0"
+  S3_BUCKET: "elasticbeanstalk-sa-east-1-056267554788"
+  AWS_ID: ${MY_AWS_ID}
+  AWS_ACCESS_KEY_ID: ${MY_AWS_ACCESS_KEY_ID}
+  AWS_SECRET_ACCESS_KEY: ${MY_AWS_SECRET_ACCESS_KEY}
+  AWS_REGION: sa-east-1
+  AWS_PLATFORM: Docker
+
 stages:
   - build
+  - deploy
 
 build:
   stage: build
@@ -11,3 +22,6 @@ build:
     - cd frontend2
     - ls
     - docker build -t app .
+
+deploy:
+  stage: deploy
