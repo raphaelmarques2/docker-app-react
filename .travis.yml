@@ -1,0 +1,23 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - cd frontend2
+  - docker build -t app .
+
+script:
+  - ls
+
+deploy:
+  provider: elasticbeanstalk
+  region: sa-east-1
+  app: docker-app-react
+  env: Dockerappreact-env
+  bucket_name: elasticbeanstalk-sa-east-1-056267554788
+  bucket_path_: ""
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
