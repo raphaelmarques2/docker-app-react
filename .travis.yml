@@ -1,5 +1,3 @@
-sudo: required
-
 services:
   - docker
 
@@ -15,9 +13,9 @@ deploy:
   region: sa-east-1
   app: docker-app-react
   env: Dockerappreact-env-2
-  bucket_name: elasticbeanstalk-sa-east-1-056267554788
+  bucket: elasticbeanstalk-sa-east-1-056267554788
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
-  skip_cleanup: "true"
+  cleanup: "false"
