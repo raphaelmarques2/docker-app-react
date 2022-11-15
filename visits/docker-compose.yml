@@ -1,0 +1,15 @@
+version: '3'
+services:
+  redis-server:
+    image: redis
+    # container_name: redis-server
+    # ports:
+    #   - 6379:6379
+  node-app:
+    restart: on-failure # no | always | on-failure | unless-stopped
+    build: .
+    image: raphaelmarques84/visits
+    ports:
+      - 8081:8081
+    environment:
+      - REDIS_URL=redis://redis-server

@@ -1,0 +1,13 @@
+image: docker
+
+stages:
+  - build
+
+build:
+  stage: build
+  services:
+    - docker:dind
+  script:
+    - cd frontend2
+    - ls
+    - docker build -t app .
