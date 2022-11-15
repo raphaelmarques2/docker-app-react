@@ -14,9 +14,9 @@ jobs:
         with:
           lfs: "true"
       - name: Build the docker image
-        run:
-          - cd frontend2
-          - docker build -t raphaelmarques84/docker-app-react .
+        run: |
+          cd frontend2
+          docker build -t raphaelmarques84/docker-app-react .
       - name: Zip package
         run: zip -r deploy.zip *
       - name: Get timestamp
